@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>BLA - Bio Lab Analytics, LLC </title>
+
+  <!-- Responsive section -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Paul Sochacki, Alisa Ramakrishnan">
+  <meta name="description" content="Bio Lab Analytics delivers quality statistical analysis and data management for professionals working in the life sciences.">
+  <meta name="keywords" content="dataviz, coding, programming, web, Portland, Oregon, PDX, research,
+  analysis, data analytics, published, publication, peer-review, research, data management,
+  Subject Matter Expert, clinical research, Clinical Biology, biotechnology, Plant Ecology,
+  medical, clinical, biology, transfusion, plants, Genetics, Plant Ecology, population genetics scientist, hematology, chemistry, microbiology,
+  population genetics, invasive plant species, plant breeding, medical device development, hemophilia, sickle-cell disease, pathology,
+  Laboratory Medicine, Clinical Lab, Manuscript Review, IRB Review,  statistics, figures, analysis,
+  biostatistics, data analytics, Grant Writing, Experimental Design, Sample Size, Power Analysis,
+  regression, linear models, logistic regression, principal components analysis, factor analysis, correlation,
+  OHSU, Oregon Health Sciences, University, Portland State University, PSU, OCHIN, Health IT, conservation biology,
+  Sigmaplot, SAS, R, SQL, Python, XML/HTML, JavaScript, VBA, Tableau, SPSS, Arlequin, PAUP, Structure, Genepop, MrBayes,
+  Data Science, machine learning, dashboards, app development">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" href="https://www.biolabanalytics.com/images/BLAVfavicon2.ico">
+
+  <!-- A work in Progress - next task: make the carousel <more> mobile-friendly -->
+  <!-- https://github.com/blueimp/Gallery -->
+
+  <!-- JS Markup Language with structure data to display Logo along with search results in Google search -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.biolabanalytics.com",
+      "logo": "https://biolabanalytics.com/images/BLA_Logo_6_200px.jpg"
+    }
+  </script>
+
+  <!-- JS Markup Language to adjust Bootstrap Carousel speed, other specs-->
+  <script>
+    Carousel.DEFAULTS = {
+        interval: 5000, // <----- change this to adjust change rate
+        pause: 'hover',
+        wrap: true,
+        keyboard: true
+      }
+    </script>
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+      .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+        background-color: #0C2159;
+      }
+
+      /* Add a blingy background block and some padding to the footer */
+      html {
+        letter-spacing: 1px;
+        margin: 0em;
+      }
+
+      body {
+opacity: 0.9;
+        background: linear-gradient(#0f2970, #6AA16A);
+        -mox-linear-gradient(#0f2970, #6AA16A);
+        -webkit-linear-gradient(#0f2970, #6AA16A);
+        -o-linear-gradient(#0f2970, #6AA16A);
+        -ms-linear-gradient(#0f2970, #6AA16A);
+        -khtml-linear-gradient(#0f2970, #6AA16A);
+        font-family: garamond, helvetica, times new roman;
+        color: ivory;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .top {
+        right: 0px;
+        background: clear;
+        text-align: center;
+        position: fixed;
+        width: 30px;
+        opacity: .4;
+        z-index: 1;
+        height: 60px;
+      }
+
+      .top p {
+        color: #0C2159;
+        font-size: 25px;
+      }
+
+      .top a {
+        text-decoration: none;
+      }
+
+      .sub-banner {
+        letter-spacing: 7px;
+        font-size: 1em;
+        text-align: center;
+        padding-top: 15px;
+        padding-right: 2px;
+        padding-left: 2px;
+        color: ivory;
+        height: 65px;
+        /* For browsers that do not support gradients */
+        background: clear;
+        background: -webkit-linear-gradient(right, #0f2970, #6AA16A, #0C2159);
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(right, #0f2970, #6AA16A, #0C2159);
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(right, #0f2970, #6AA16A, #0C2159);
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to right, #0f2970, #6AA16A, #0C2159);
+        /* Standard syntax */
+      }
+
+      .icon {
+        position: relative;
+        overflow: hidden;
+        width: 80px;
+        height: 50px;
+      }
+
+      /** The "shine" element*/
+      .icon:after {
+        content: "";
+        position: absolute;
+        top: -120%;
+        left: -200%;
+        width: 200%;
+        height: 100%;
+        opacity: 0.4;
+        transform: rotate(50deg);
+        background: linear-gradient( to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0.0) 100%);
+      }
+
+      /* Hover state - trigger effect */
+      .icon:hover:after {
+        opacity: 1;
+        top: 40%;
+        left: 110%;
+        transition-property: left, top, opacity;
+        transition-duration: 0.9s, 1s, 1s;
+        transition-timing-function: ease;
+      }
+
+      /* Active state */
+      .icon:active:after {
+        opacity: 0.4;
+      }
+
+      .container {
+        align-content: center;
+      }
+
+      .container-fluid {
+        width: 70%;
+        align-content: center;
+        background-color: #0C2159;
+      }
+
+      .col-sm-6 {
+        text-align: center;
+        padding: 1em;
+      }
+
+      .col-sm-6 img {
+        width: 60%;
+        justify-content: center;
+      }
+
+      .col-sm-12 {
+        text-align: center;
+      }
+
+      .jumbotron {
+        text-align: center;
+        padding: 1em;
+        margin-top: 1em;
+        opacity: 0.8;
+        background-color: #0C2159;
+      }
+
+      .jumbotron h3 {
+        color: ivory;
+        letter-spacing: 0.3em;
+      }
+
+      .jumbotron img {
+        margin: 2em;
+      }
+
+      .col-sm-7 {
+        margin: 10px;
+        padding: 5px;
+      }
+
+      img .social {
+        justify-content: center;
+      }
+
+      .social a {
+      margin: 1em;
+      }
+
+      .social {
+        margin-top: 1em;
+
+      }
+
+      .col-sm-8 {
+        align-content: center;
+      }
+
+      h4 {
+        color: #0C2159;
+        letter-spacing: 3px;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .about {
+        text-align: center;
+        color: #0C2159;
+        font-size: 30px;
+        padding: 20px;
+        opacity: 0.9;
+      }
+
+      .price {
+        opacity: 0.9;
+      }
+
+      .price p {
+        text-align: center;
+        font-size: 20px;
+        opacity: 0.9;
+      }
+
+      .estimates {
+        text-align: center;
+      }
+
+      .estimates li {
+        list-style-type: none;
+        line-height: 50px;
+        font-size: 18px;
+      }
+
+      .bottom {
+        background-color: #0C2159;
+        margin-top: 100px;
+        height: 130px;
+        width: 100%;
+      }
+
+      .shiny {
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        width: 200px;
+        height: 200px;
+        padding: 0px;
+        overflow: hidden;
+        opacity: 0.7;
+      }
+
+      .show-off {
+        width: 240px;
+        height: 240px;
+        position: relative;
+        top: -250px;
+        left: -300px;
+        transition: 0.50s;
+        transform: rotate(45deg);
+        background: linear-gradient(45deg, rgba(255, 255, 255, 0.01)25%, rgba(255, 255, 255, 0.30)50%, rgba(255, 255, 255, 0.01)80%);
+      }
+
+      .shiny:hover .show-off {
+        transform: rotate(-45);
+        left: 250px;
+        top: -200px;
+      }
+
+      .carousel-control.right,
+      .carousel-control.left {
+        background-image: none;
+        color: yellow;
+      }
+
+      .carousel-inner p {
+        width: 100%;
+        /* Set width to 100% */
+        height: 380px;
+        color: white;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 10%;
+        padding-right: 5%;
+        padding-left: 5%;
+      }
+
+      .carousel-inner a {
+        width: 80%;
+        /* Set width to 100% */
+        color: yellow;
+      }
+
+      .carousel-inner {
+        background-color: #0C2159;
+      }
+
+      .carousel-indicators {
+        background: black;
+        bottom: -5%;
+      }
+
+      .carousel-indicators li {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        text-indent: 0;
+        cursor: pointer;
+        border: none;
+        background-color: skyblue;
+        box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0);
+      }
+
+      .carousel-indicators .active {
+        width: 12px;
+        height: 12px;
+        background-color: #ffff99;
+      }
+
+      .myCarousel {
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carousel:hover .carousel-control {
+        visibility: visible;
+      }
+
+      /* Hide the carousel text when the screen is less than 600 pixels wide */
+      @media (max-height: 280px max-width: 600px) {
+        .carousel-caption {
+          display: none;
+        }
+      }
+
+      hr {
+        width: 30%;
+      }
+
+    </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108253484-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-108253484-1');
+
+    </script>
+</head>
+
+<body>
+  <!--This is the top right element
+       T
+       O
+       P
+*Not sure this is needed any longer.
+  <div class="top">
+    <a href="#" class="icon">
+      <p><b>T</b></p>
+      <p><b>O</b></p>
+      <p><b>P</b></p>
+    </a>
+  </div>-->
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">BLA</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#about" class="icon">About</a></li>
+          <li><a href="#client" class="icon">Clients</a></li>
+          <li><a href="#pricing" class="icon">Pricing</a></li>
+          <li><a href="#staff" class="icon">Staff</a></li>
+          <!--<li><a href="#tweets" class="icon">Tweets</a></li>-->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sub-banner">
+    <p>Data Solutions for Life Science Research</p>
+  </div>
+
+  <div class="container">
+    <h4 id="about"></h4><br>
+    <div class="row">
+      <div class="col-sm-12" style="padding-top: 1%">
+        <p>An effective strategy for managing and analyzing your data will help you save time and resources over the course of your projects. Having a clear line of inquiry and a solid understanding of the tools available will benefit your work,
+          allowing
+          you to focus the information contained in your data and produce meaningful, reproducible, and publishable findings.</p><br />
+
+        <p>A variety of tools exist to help life science professionals meet their needs for data analysis, including spreadsheets, relational
+          databases, statistical techniques, machine learning methods, and business intelligence software. Each of these tools has its own complement of advantages, disadvantages, and particular use cases where it shines, though with so many options
+          identifying the best tools for the job can seem overwhelming.</p><br />
+        <p>Bio Lab Analytics, LLC, provides quality data analysis and management services for professionals working in the life sciences.</p>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="shiny">
+          <img src="https://biolabanalytics.com/images/BLA_Logo_6_200px.jpg" alt="image">
+          <div class="show-off">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <p>We focus on statistical analysis in R, SAS, Python, and SPSS software packages, collaborating with clinicians, researchers, and other decision-makers to analyze their data. Examples of common requests include study design for research &
+          quality
+          improvement projects, statistics/biostatistics, descriptive analysis, and predictive modeling. We also work with our clients to develop effective strategies for collecting, storing, and managing their data.</p>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <hr />
+  <h4 id="client"><b>CLIENTS</b></h4>
+  <p>Here is what some of our clients have to say about us!</p>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-8">
+        <div id="myCarousel" class="carousel slide " data-ride="carousel">
+
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li class="item1 active" data-target="#myCarousel" data-slide-to="0"></li>
+            <li class="item2" data-target="#myCarousel" data-slide-to="1"></li>
+            <li class="item3" data-target="#myCarousel" data-slide-to="2"></li>
+            <li class="item4" data-target="#myCarousel" data-slide-to="3"></li>
+            <li class="item5" data-target="#myCarousel" data-slide-to="4"></li>
+            <li class="item6" data-target="#myCarousel" data-slide-to="5"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <p>"Paul Sochacki takes the mystery out of statistics. He is not only able to use the most appropriate statistical test but is able to make the results understandable to us mere mortals who were not blessed with his degree of
+                understanding
+                and facility with statistics. He is accessible and his work is of the highest quality. I highly recommend him."<br><br>
+                <b>David Oleson, PT, CPS</b><br> Physical Therapy and Hemophilia<br> Portland, OR<br>
+                <a href="https://www.ohsu.edu/xd/health/services/cancer/getting-treatment/services/oregon-regional-hemophilia.cfm">
+                  Oregon Regional Hemophilia Center (OHSU)</a></p>
+            </div>
+            <div class="item">
+              <p>"I have worked with Paul on several small studies. He has been very responsive to our needs and time requirements. One study involved non-continuous data, making analysis tricky. Paul was able to to perform the appropriate analysis
+                demonstrating
+                statistical differences and the paper was accepted without comment."<br><br>
+                <b>Jason Taylor, MD, PhD</b><br> Clinical Research & Diagnostics Development <br> Portland, OR<br>
+                <a href="https://www.pvarf.org/">Portland VA Research Foundation</a></p>
+            </div>
+            <div class="item" style="font-size: 90%">
+              <p>"“I have worked with Paul on a clinical research project for over 2 years now and he has been exceptional. His guidance in the beginning assured an effective clinical design which resulted in a very informative study. As questions
+                and
+                challenges came up in the study, he was readily available and very responsive, and was able to explain his methods in a way that I could easily understand. After data collection, Paul worked diligently on the data analysis and
+                explained
+                all of the results simply. As we are working on the manuscript, he helped me write the statistics portion is a timely and concise manner. Because of his diligence, talent, and hard work, I was able to complete the project on time
+                with
+                clinically relevant results.” "<br><br>
+                <b>Katrina Winsnes, MD, MCR</b><br> Pediatric Hematology/Oncology<br> Portland, OR<br>
+                <a href="https://www.ohsu.edu/xd/health/services/doernbecher/programs-services/cancer/index.cfm">Doernbecher Children's Hospital</a><br><br>
+            </div>
+            <div class="item">
+              <p>"I was sort of lost in the world of statistics when I first attempted to analyze my cell culture data. Then I sought out the help of Paul and after our first consult he was able to piece it all together for me. Thank you so much for
+                your
+                help on my project."<br><br>
+                <b>Chris Lukaszewski, MS Biology</b><br> Biofuel Development<br> Edinburg, TX<br>
+                <a href="https://www.utrgv.edu/biology/">University of Texas Rio Grande Valley</a></p>
+            </div>
+            <div class="item">
+              <p>"I had a clinically significant outcome in my hand. Paul helped me turn the data into a study and was immensely helpful with manuscript editing, as well as the IRB submission, for a peer-reviewed journal. In addition to his help
+                with data
+                analysis and writing, Paul also provided encouragement and relevant feedback for our work."<br><br>
+                <b>Jan Radzik, MD</b><br> Integrative Medicine, Nutrition<br> Lake Oswego, OR<br>
+                <a href="https://oregonwholehealth.com/">Oregon Whole Health</a></p>
+            </div>
+            <div class="item" style="font-size: 90%">
+              <p>"We've worked with Paul on a variety of clinical research projects. He goes above and beyond when performing statistical and data analysis because he understands the bigger picture of research and how to extract clinical
+                implications from
+                the data. He contributes to writing and reviewing research protocols, making detailed and visually stimulating graphics, and is always willing to meet in person or via phone to discuss results or clarify questions. He is a wonderful
+                collaborator, and always responds very quickly and thoroughly. Will continue to utilize his services again and again!"<br><br>
+                <b>Bethany Sloane, PT, DPT, PCS</b><br>
+                <a href="https://www.ohsu.edu/xd/health/child-development-and-rehabilitation-center/">Child Development & Rehabilitation Center (OHSU)</a><br><br>
+                <b> Britta Gurgel, PT, DPT, PCS</b><br>
+                <a href="https://www.legacyhealth.org/locations/hospitals/randall-childrens-hospital-at-legacy-emanuel.aspx">Randall Children's Hospital (Legacy Health)</a></p>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Carousel wrapped in col-grouping -->
+      <div class="col-sm-2">
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+  <hr />
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 id="pricing"><b>PRICING</b></h4>
+        <p>The base rate for our services is $90/hr. All new clients receive a free 30 minute consultation to discuss the scope of their project and identify the analysis required to meet their needs.</p>
+        <h4><b>Hourly Estimates for Common Tasks</b></h4>
+        <p>Sample Size & Power Analysis - 1 to 3 hr</p>
+        <p>Experimental Design - 2 to 3 hr</p>
+        <p>Graphs/Figures - 1 to 3 hr</p>
+        <p>Manuscript or IRB Review - 1 to 2 hr</p>
+        <p>Grant Writing Review - 1 to 2 hr</p>
+        <h4><b>External Agencies</b></h4>
+        <p>Projects involving public health or regulatory agencies may be billed at a higher rate, due to the specialized knowledge and additional documentation often required when collaborating with these organizations.</p>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <hr />
+
+  <!-- new section -->
+  <h4 id="staff"><b>STAFF</b></h4><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="https://biolabanalytics.com/images/PS_Small_mug.jpg" style="width:375px;height:390px;">
+      </div>
+      <div class="col-sm-6">
+        <h4><strong><em>Paul Sochacki, MS</em></strong></h4>
+        <br />
+        <p>Owner (Principal Consultant)<br></p>
+        <p><strong>Software Expertise:</strong> R, SAS, Python, SQL, Tableau, VBA, Access, Excel, Google Analytics</p>
+        <p><strong> Subject Matter Expert:</strong> Clinical Biology, EMR/LIS, Ecology </p>
+        <p>Paul is a programmer and biologist that has provided statistical analysis and data management services for a variety of clinical research and quality improvement projects over the past 8 years. He has over 12 years experience analyzing
+          data
+          using SAS, R, and SQL, and has been published in several peer-reviewed journals.</p>
+        <div class="social">
+          <a title="E-mail" href="mailto:biolabstats@gmail.com?Subject=Bio Lab Analytics : E-mail Request" target="_top"><img src="http://cdn.onlinewebfonts.com/svg/img_358140.png" style="width:50px;height:50px;"></a>
+          <a title="LinkedIn" href="https://www.linkedin.com/psochacki"><img src="http://www.rpost.com/wp-content/uploads/2016/06/Linkedin_circle.svg_.png" style="width:50px;height:50px;"></a>
+          <a title="ResearchGate" href="https://www.researchgate.net/profile/Paul_Sochacki"><img src="http://www.fogarena.com/images/researchgate.png" style="width:50px;height:50px;"></a>
+          <a title="Instagram" href="https://www.instagram.com/biolabanalytics/"><img src="http://www.oogazone.com/wp-content/uploads/2018/11/hd-instagram-transparent-logo-design-125x125.jpg" style="width:50px;height:50px;"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="https://biolabanalytics.com/images/20180722Alisa2.jpg" style="width:325px;height:380px;">
+      </div>
+      <div class="col-sm-6">
+        <h4><b><i>Alisa Ramakrishnan, PhD</i></b></h4>
+        <br />
+        <p>Independent Contributor<br></p>
+        <p><b>Software Expertise:</b> R, SPSS, Arlequin, PAUP, Structure, Genepop, MrBayes</p>
+        <p><b>Subject Matter Expert:</b> Population Genetics, Plant Ecology</p>
+        <p>Alisa is a population genetics scientist with a background in invasive plant species research. She has worked on projects ranging from plant breeding to medical device development, and has published peer-reviewed articles in a variety of
+          scientific
+          journals.</p>
+        <div class="social">
+          <a title="E-mail" href="mailto:alisa.ramakrishnan@gmail.com?Subject=Bio Lab Analytics : E-mail Request" attribute="E-mail" target="_top"><img src="http://cdn.onlinewebfonts.com/svg/img_358140.png" style="width:50px;height:50px;"></a>
+          <a title="LinkedIn" href="https://www.linkedin.com/in/alisa-ramakrishnan-phd-07a3921"><img src="http://www.rpost.com/wp-content/uploads/2016/06/Linkedin_circle.svg_.png" style="width:50px;height:50px;"></a>
+          <a title="ResearchGate" href="https://www.researchgate.net/profile/Alisa_RamakrishnanResearchGate.net"><img src="http://www.fogarena.com/images/researchgate.png" style="width:50px;height:50px;"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <!--Need this section? Because the links at the footer might provide the same pathway.-->
+  <!--<div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 id="tweets"><b>Tweets from @BioLabAnalytics</b></h4>
+          <a href="https://twitter.com/biolabanalytics?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @BioLabAnalytics</a>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a class="twitter-timeline" data-chrome="noheader" data-tweet-limit="5" data-width="500" data-height="500" href="https://twitter.com/biolabanalytics?ref_src=twsrc%5Etfw"></a>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </div>-->
+
+  <!--footer-->
+  <div class="jumbotron">
+    <h3>Connect with us</h3>
+    <a href="https://twitter.com/biolabanalytics?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Abiolabanalytics&ref_url=https%3A%2F%2Fwww.biolabanalytics.com%2F%23">
+      <img src="https://vignette.wikia.nocookie.net/magic-school-lussid/images/1/19/Twitter_icon.svg/revision/latest?cb=20150830032010" style="width:50px;height:50px;" </a> <a href="https://www.facebook.com/events/2238786456360138/?notif_t=plan_user_invited&notif_id=1547070184318371">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Facebook_circle_pictogram.svg/1024px-Facebook_circle_pictogram.svg.png" style="width:50px;height:50px;" </a> <a href="https://www.linkedin.com/company/bio-lab-analytics-llc/">
+      <img src="http://www.rpost.com/wp-content/uploads/2016/06/Linkedin_circle.svg_.png" style="width:50px;height:50px;" </a> <h3>2019</h3>
+  </div>
+</body>
+
+</html>
