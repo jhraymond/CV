@@ -18,6 +18,10 @@
 
   <!-- Begin CSS Styling -->
   <style>
+html {
+  background-color: red;
+}
+
     body {
       font-family: double struck;
       background: linear-gradient(#184977, ivory);
@@ -91,22 +95,29 @@
         .col-sm-6 input {
           color: gray;
           background-color: ivory;
-          padding: 0.1em;
+          padding: 10px 15px;
           text-align: center;
           border-radius: 3px;
           border: 0;
           outline: 0;
+          width: 100%;
+          display: block;
+          font-size: 12pt;
         }
 
         .col-sm-6 textarea {
           background-color: ivory;
           color: gray;
-          height: 12em;
-          width: 14em;
+          height: 13.5em;
+
           border-radius: 3px;
           border: 0;
           outline: 0;
-          font: 13px Lato,sans-serif;
+          font: Lato,sans-serif;
+          width: 100%;
+          display: block;
+          font-size: 12pt;
+
         }
 
         footer {
@@ -129,7 +140,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h4>Please fill out the quick form and we will be in touch with lightning speed.</h4>
+        <h4>Please fill out the quick form below and we will respond.</h4>
       </div>
     </div>
   </div>
@@ -142,12 +153,12 @@
           <br>
           <input type="text" name="yourName" value="">
           <br>
-          <br>
+
           <label>Email</label>
           <br>
           <input type="email" name="yourEmail" value="">
           <br>
-          <br>
+
           <label>Phone Number</label>
           <br>
           <input type="number" name="yourNumber" value="">
