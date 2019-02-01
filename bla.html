@@ -61,10 +61,6 @@
       }
 
       /* Add a blingy background block and some padding to the footer */
-      html {
-        letter-spacing: 1px;
-      }
-
       body {
 opacity: 0.9;
         background: linear-gradient(#0f2970, #6AA16A);
@@ -73,11 +69,12 @@ opacity: 0.9;
         -o-linear-gradient(#0f2970, #6AA16A);
         -ms-linear-gradient(#0f2970, #6AA16A);
         -khtml-linear-gradient(#0f2970, #6AA16A);
-        font-family: garamond, helvetica, times new roman;
+        font-family: garamond, helvetica, Open Sans, Arial;
         color: ivory;
         font-size: 18px;
         text-align: center;
         background-repeat: no-repeat;
+letter-spacing: 0.06em;
       }
 
       .top {
@@ -175,16 +172,22 @@ opacity: 0.9;
 
       .col-sm-6 p {
         text-align: center;
-padding: 0.5em;
+        padding-right: 3em;
+        padding-left: 3em;
+        font-size: 14pt;
       }
 
       .col-sm-6 img {
-        margin-bottom: 1em;
-
+        margin-bottom: 2em;
       }
 
       .col-sm-12 {
         text-align: center;
+      }
+
+      .col-sm-12 p {
+        padding-right: 3em;
+        padding-left: 3em;
       }
 
       .col-sm-12  h4 p {
@@ -192,6 +195,10 @@ padding: 0.5em;
         margin: 1em;
         padding: 0.5em;
         font-size: 16pt;
+      }
+
+      h4 {
+        letter-spacing: 0.1em
       }
 
       .jumbotron {
@@ -221,7 +228,7 @@ padding: 0.5em;
       }
 
       .social a {
-      margin: 0.3em;
+      margin: 0.7em;
       }
 
       .social {
@@ -238,16 +245,6 @@ padding: 0.5em;
         color: #0C2159;
         font-size: 30px;
         padding: 20px;
-        opacity: 0.9;
-      }
-
-      .price {
-        opacity: 0.9;
-      }
-
-      .price p {
-        text-align: center;
-        font-size: 20px;
         opacity: 0.9;
       }
 
@@ -363,8 +360,14 @@ padding: 0.5em;
       }
 
       hr {
-        width: 30%;
+        border-style: none;
+        width: 6%;
+        border-color: #6AA16A;
+        border-top-style: dotted;
+        border-width: 0.5em;
       }
+
+
 
     </style>
 
@@ -423,33 +426,42 @@ padding: 0.5em;
     <p>Data Solutions for Life Science Research</p>
   </div>
 
+  <h4 id="about"></h4>
   <div class="container">
-    <h4 id="about"></h4><br>
     <div class="row">
-      <div class="col-sm-12" style="padding-top: 1%">
-        <p>An effective strategy for managing and analyzing your data will help you save time and resources over the course of your projects. Having a clear line of inquiry and a solid understanding of the tools available will benefit your work,
-          allowing
-          you to focus the information contained in your data and produce meaningful, reproducible, and publishable findings.</p><br />
+      <div class="col-sm-12" style="padding: 2%">
+        <p>Bio Lab Analytics, LLC, provides quality data analysis and management services for professionals
+          working in the life sciences. We focus on statistical analysis in R, SAS, Python, and SPSS software packages, collaborating with clinicians,
+          researchers, and other decision-makers to analyze their data.</p><br />
 
-        <p>A variety of tools exist to help life science professionals meet their needs for data analysis, including spreadsheets, relational
-          databases, statistical techniques, machine learning methods, and business intelligence software. Each of these tools has its own complement of advantages, disadvantages, and particular use cases where it shines, though with so many options
-          identifying the best tools for the job can seem overwhelming.</p><br />
-          
-        <p>Bio Lab Analytics, LLC, provides quality data analysis and management services for professionals working in the life sciences.</p>
+        <p>An effective strategy for managing and analyzing your data will help you save time and resources over
+          the course of your projects. Having a clear line of inquiry and a solid understanding of the tools
+          available will benefit your work, allowing you to focus the information contained in your data and
+          produce meaningful, reproducible, and publishable findings.</p>
       </div>
+    </div>
+  </div>
 
-      <div class="col-sm-12">
-        <div class="shiny">
-          <img src="https://biolabanalytics.com/images/BLA_Logo_6_200px.jpg" alt="image">
-          <div class="show-off">
-          </div>
-        </div>
+  <div class="col-sm-12">
+    <div class="shiny">
+      <img src="https://biolabanalytics.com/images/BLA_Logo_6_200px.jpg" alt="image">
+      <div class="show-off">
       </div>
+    </div>
+  </div>
 
+  <div class="container">
+    <div class="row">
       <div class="col-sm-12">
-        <p>We focus on statistical analysis in R, SAS, Python, and SPSS software packages, collaborating with clinicians, researchers, and other decision-makers to analyze their data. Examples of common requests include study design for research &
-          quality
-          improvement projects, statistics/biostatistics, descriptive analysis, and predictive modeling. We also work with our clients to develop effective strategies for collecting, storing, and managing their data.</p>
+        <p>Examples of common requests include study design for research &
+          quality improvement projects, statistics/biostatistics, descriptive analysis, and predictive modeling. We also
+          work with our clients to develop effective strategies for collecting, storing, and managing their data.</p>
+        <br />
+        <p>A variety of tools exist to help life science professionals meet their needs for data analysis,
+          including spreadsheets, relational databases, statistical techniques, machine learning methods,
+          and business intelligence software. Each of these tools has its own complement of advantages,
+          disadvantages, and particular use cases where it shines, though with so many options identifying the
+          best tools for the job can seem overwhelming.</p>
       </div>
     </div>
   </div>
@@ -457,6 +469,7 @@ padding: 0.5em;
   <br />
   <br />
   <hr />
+
   <h4 id="client"><b>CLIENTS</b></h4>
   <p>Here is what some of our clients have to say about us!</p>
   <br>
@@ -552,26 +565,29 @@ padding: 0.5em;
   <br />
   <br />
   <br />
-  
   <hr />
-  
+
+  <h4 id="pricing"><b>PRICING</b></h4>
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h4 id="pricing"><b>PRICING</b></h4>
-        <p>The base rate for our services is $90/hr. All new clients receive a free 30 minute consultation to discuss the scope of their project and identify the analysis required to meet their needs.</p>
+        <p>The base rate for our services is $90/hr. All new clients receive a free 30 minute consultation to discuss
+          the scope of their project and identify the analysis required to meet their needs.</p>
+        <br />
         <h4><b>Hourly Estimates for Common Tasks</b></h4>
         <p>Sample Size & Power Analysis - 1 to 3 hr</p>
         <p>Experimental Design - 2 to 3 hr</p>
         <p>Graphs/Figures - 1 to 3 hr</p>
         <p>Manuscript or IRB Review - 1 to 2 hr</p>
         <p>Grant Writing Review - 1 to 2 hr</p>
+        <br />
         <h4><b>External Agencies</b></h4>
         <p>Projects involving public health or regulatory agencies may be billed at a higher rate, due to the specialized knowledge and additional documentation often required when collaborating with these organizations.</p>
       </div>
     </div>
   </div>
 
+  <br />
   <br />
   <br />
 
@@ -599,7 +615,7 @@ padding: 0.5em;
       <div class="col-sm-12">
         <p>Paul is a programmer and biologist that has provided statistical analysis and data management services for a variety of clinical research and quality improvement projects over the past 8 years. He has over 12 years experience analyzing
           data
-          using SAS, R, and SQL, and has been published in several peer-reviewed journals.</p>
+          using SAS, R, and SQL, and has been published in several peer-reviewed journals.</p><br />
         <div class="social">
           <a title="E-mail" href="mailto:biolabstats@gmail.com?Subject=Bio Lab Analytics : E-mail Request" target="_top"><img src="http://cdn.onlinewebfonts.com/svg/img_358140.png" style="width:50px;height:50px;"></a>
           <a title="LinkedIn" href="https://www.linkedin.com/psochacki"><img src="http://www.rpost.com/wp-content/uploads/2016/06/Linkedin_circle.svg_.png" style="width:50px;height:50px;"></a>
@@ -610,6 +626,8 @@ padding: 0.5em;
     </div>
   </div>
 
+  <br />
+  <br />
   <br />
   <br />
 
@@ -633,7 +651,7 @@ padding: 0.5em;
       <div class="col-sm-12">
         <p>Alisa is a population genetics scientist with a background in invasive plant species research. She has worked on projects ranging from plant breeding to medical device development, and has published peer-reviewed articles in a variety of
           scientific
-          journals.</p>
+          journals.</p><br />
         <div class="social">
           <a title="E-mail" href="mailto:alisa.ramakrishnan@gmail.com?Subject=Bio Lab Analytics : E-mail Request" attribute="E-mail" target="_top"><img src="http://cdn.onlinewebfonts.com/svg/img_358140.png" style="width:50px;height:50px;"></a>
           <a title="LinkedIn" href="https://www.linkedin.com/in/alisa-ramakrishnan-phd-07a3921"><img src="http://www.rpost.com/wp-content/uploads/2016/06/Linkedin_circle.svg_.png" style="width:50px;height:50px;"></a>
@@ -643,6 +661,9 @@ padding: 0.5em;
     </div>
   </div>
 
+  <br />
+  <br />
+  <br />
   <br />
   <br />
 
