@@ -20,10 +20,14 @@
   <style>
     .jumbotron {
       background-color: #5c8d89;
+      background: url("https://media.licdn.com/dms/image/C4E16AQFT1QxwLT7INA/profile-displaybackgroundimage-shrink_350_1400/0?e=1554940800&v=beta&t=RC_KDgK_YRMrpg8Hy0kPxMv1eIk_ymtbPZN3I7U0MUk");
+      background-repeat: no-repeat;
+      background-size: cover;
       text-align: left;
       color: #f9f8eb;
       padding-left: 2em;
       text-shadow: 1px 1px #74b49b;
+      height: 14em;
     }
 
     body {
@@ -33,30 +37,40 @@
       letter-spacing: 0.2em;
     }
 
+    hr {
+      width: 10em;
+    }
+
+    .col-md-12 {
+      color: #f9f8eb;
+      text-shadow: 1px 1px #74b49b;
+      margin-left: 1em;
+    }
+
     .col-md-4 {
-      padding: 1em;
+      padding: 0.5em;
       text-align: center;
       letter-spacing: 0.1em;
       margin-top: 1em;
-      border: 2px solid black;
     }
 
-.col-md-4 a, h3 {
-  color: #f9f8eb;
-}
+    .col-md-4 a,
+    h3 {
+      color: #f9f8eb;
+    }
 
-.footer {
-  background-color: #5c8d89;
-  height: 100%;
-  text-align: center;
-  padding: 1em;
-  margin: 0em;
-}
+    .footer {
+      background-color: #5c8d89;
+      height: 100%;
+      text-align: center;
+      padding: 1em;
+      margin: 0em;
+    }
 
-.footer img {
-margin: 2em;
-}
+    .footer img {
+      margin: 2em;
 
+    }
   </style>
 
 </head>
@@ -64,62 +78,77 @@ margin: 2em;
 <body>
   <div class="jumbotron text-center">
     <h1>My Work Portfolio</h1>
-    <p>My tireless effort to prove my worth.</p>
-
+    <p>My tireless effort to prove my worth.</p></a>
   </div>
 
-<br />
-<br />
+  <br />
+  <br />
+  <hr />
 
-  <div class="container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        Examples of work
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <a href="http://jhraymond.github.io/CV/Fireweed.html">Fireweed Tavern</a>
+        <a href="http://jhraymond.github.io/CV/Fireweed.html">
+          <img src="images/Fireweed.png" style="width: 90%" /></a>
       </div>
       <div class="col-md-4">
-        <a href="http://jhraymond.github.io/CV/manara.html">March of Civilization</a>
+        <a href="http://jhraymond.github.io/CV/manara.html">
+          <img src="images/manara.png" style="width: 90%" /></a>
       </div>
       <div class="col-md-4">
-        <a href="http://jhraymond.github.io/CV/contact.html">Contact Page</a>
+        <a href="http://jhraymond.github.io/CV/contact.html">
+          <img src="images/contact.png" style="width: 90%" /></a>
       </div>
     </div>
   </div>
 
   <br />
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <a href="http://jhraymond.github.io/CV/statesmen.html">Statesmen</a>
+        <a href="http://jhraymond.github.io/CV/statesmen.html">
+          <img src="images/statesmen.png" style="width: 90%" /></a>
       </div>
       <div class="col-md-4">
-        <a href="http://jhraymond.github.io/CV/bla.html">BioLabAnalytics</a>
+        <a href="http://jhraymond.github.io/CV/bla.html">
+          <img src="images/bla.png" style="width: 90%" /></a>
       </div>
       <div class="col-md-4">
-        <a href="https://jhraymond.github.io/CV/simpletaskspdx.html">SimpleTasksPDX</a>
-      </div>
-    </div>
-  </div>
-
-  <br />
-<!--
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <a href="http://jhraymond.github.io/CV/statesmen.html">Super Villain</a>
-      </div>
-      <div class="col-md-4">
-        <a href="http://jhraymond.github.io/CV/dirtfarms.html">Dirt Farmer's</a>
-      </div>
-      <div class="col-md-4">
-        <a href="https://jhraymond.github.io/CV/simpletaskspdx.html">Booty Massage</a>
+        <a href="https://jhraymond.github.io/CV/simpletaskspdx.html">
+          <img src="images/simpletaskspdx.png" style="width: 90%" /></a>
       </div>
     </div>
   </div>
 
   <br />
 
-  <div class="container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <a href="http://jhraymond.github.io/CV/dirtfarms.html">
+          <img src="images/dirtfarms.png" style="width: 90%" /></a>
+      </div>
+      <div class="col-md-4">
+        <img src="images/soon.png" style="width: 72.3%" /></a>
+      </div>
+      <div class="col-md-4">
+        <img src="images/soon.png" style="width: 72.3%" /></a>
+      </div>
+    </div>
+  </div>
+  <!--
+  <br />
+
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
         <a href="http://jhraymond.github.io/CV/statesmen.html">ASMR Tech</a>
@@ -135,7 +164,7 @@ margin: 2em;
 
   <br />
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
         <a href="http://jhraymond.github.io/CV/statesmen.html">Artichoke n Chicken</a>
@@ -149,11 +178,11 @@ margin: 2em;
     </div>
   </div>
 -->
-  
-<br />
-<br />
 
-  <div class = "footer">
+  <br />
+  <br />
+
+  <div class="footer">
     <h3>Put me to work!</h3>
     <img src="https://findicons.com/files/icons/2830/clean_social_icons/125/facebook.png" style="width:50px;height:50px;">
     <img src="http://www.oogazone.com/wp-content/uploads/2018/11/hd-instagram-transparent-logo-design-125x125.jpg" style="width:50px;height:50px;">
