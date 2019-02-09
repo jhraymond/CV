@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -20,7 +19,6 @@
   <!-- Begin CSS Styling -->
   <style>
     body {
-      margin: 2em;
       background-color: ivory;
       font-family: garamond;
     }
@@ -29,10 +27,25 @@
       border-radius: 50%;
     }
 
+    .about p {
+      font-size: 1.3em;
+      margin: 1em;
+      text-align: center;
+    }
+
     p,
     td,
     li {
       font-size: 1.3em;
+      margin: 1em;
+    }
+
+    h3 {
+      margin: 1em;
+    }
+
+    h4 {
+      letter-spacing: 0.1em;
     }
 
     hr {
@@ -45,8 +58,19 @@
       margin-bottom: 2em;
     }
 
+    .header {
+      background: url("https://media.licdn.com/dms/image/C4E16AQFT1QxwLT7INA/profile-displaybackgroundimage-shrink_350_1400/0?e=1554940800&v=beta&t=RC_KDgK_YRMrpg8Hy0kPxMv1eIk_ymtbPZN3I7U0MUk");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 2em;
+      margin: 0;
+    }
+
+    table {
+      margin: 1em;
+    }
+
     table td {
-      text-align: ;
       padding-right: 2.5em;
     }
 
@@ -58,26 +82,33 @@
 </head>
 
 <body>
-  <table>
-    <tr>
-      <td>
-        <img src="images/profile img.png" alt="james profile picture" />
-      </td>
-      <td>
-        <h1> James Raymond</h1>
-        <p><em>Scientist, Web Developer, Writer</em><br />
-          <a href="https://www.linkedin.com/in/james-raymond-0756963/">Linkedin Profile</a><br />
-          <a href="https://github.com/jhraymond">GitHub</a>
-        </p>
-      </td>
-    </tr>
-  </table>
+
+  <div class="header">
+    <table>
+      <tr>
+        <td>
+          <img src="images/profile img.png" alt="james profile picture" />
+        </td>
+        <td>
+          <h1> James Raymond</h1>
+          <h4><em>Scientist, Web Developer, Writer</em><br />
+            <a href="https://www.linkedin.com/in/james-raymond-0756963/">Linkedin Profile</a><br />
+            <a href="https://github.com/jhraymond">GitHub</a>
+          </h4>
+        </td>
+      </tr>
+    </table>
+  </div>
 
   <hr />
-  <p>
-    I am a burgeoning web developer, experienced scientist, and goofy father of two.<br />
-    I enjoy traveling abroad, reading about history, writing cheesy fiction and, of course, learing what I can about becoming an effective web developer.
-  </p>
+
+  <div class="about">
+    <p>
+      I am a burgeoning web developer, experienced scientist, and goofy father of two.<br />
+      I enjoy traveling abroad, reading about history, writing cheesy fiction and, of course, learing what I can about becoming an effective web developer.
+    </p>
+  </div>
+
   <hr />
   <h3>
     Education
@@ -136,7 +167,10 @@
     <li><a href="http://jhraymond.github.io/CV/Portfolio.html">Portfolio</a></li>
   </ul>
 
-<!--maybe change these certifications to clickable thumbnails-->
+  <br />
+  <br />
+
+  <!--maybe change these certifications to clickable thumbnails-->
   <div class="container">
     <div class="row">
       <div class="col-md-3">
