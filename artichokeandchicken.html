@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Artichoke and Chicken</title>
+
+  <!-- Responsive section -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Raymond, James">
+  <meta name="keywords" content="">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+
+    body {
+      font-family: Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
+      color: black;
+      font-size: 2em;
+      padding: 0 100px 0 100px;
+      letter-spacing: 0.2em;
+      background-color: #e7f0d2;
+    }
+
+    .jumbotron {
+      background-color: #abcb89;
+      text-align: right;
+      margin: 0;
+      padding: 100px 20px 40px 20px;
+    }
+
+    .jumbotron img {
+      background-color: #abcb89;
+      width: 20%;
+      margin-right: 545px;
+    }
+
+    h1 {
+      text-align: center;
+      width: 100%;
+      font-size: 3em;
+    }
+
+    .container-fluid {
+      background-color: #6AA16A;
+      margin: 0;
+      color: black;
+    }
+
+    .navbar {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-radius: 0;
+    }
+
+    .navbar:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .navbar-inverse {
+      border-color: #6AA16A;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+      color: #d2ea9b;
+    }
+
+    .navbar-inverse .navbar-toggle:hover {
+      border-color: #d2ea9b;
+      background-color: #abcb89;
+    }
+
+    .navbar-toggle {
+      position: relative;
+      float: right;
+      padding: 8px;
+      margin-top: 8px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .dropdown-toggle {
+      background-color: #6AA16A;
+    }
+
+    .dropdown-menu {
+      background-color: #d2ea9b;
+      width: 100%;
+    }
+
+    .dropdown-menu li a {
+      background-color: #d2ea9b;
+      color: black;
+      text-align: center;
+      width: 100%;
+      padding: 3px;
+    }
+
+    .row {
+      margin: 1px;
+      padding: 10px 25px 25px 25px;
+      background-color: #d2ea9b;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {
+      float: left;
+      width: 60%;
+      text-align: left;
+    }
+
+    .leftcolumn .card {
+      padding: 30px 20px 40px 30px;
+    }
+
+    /* Right column */
+    .rightcolumn {
+      float: right;
+      width: 30%;
+      text-align: center;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+
+    /* Fake image */
+    .fakeimg {
+      background-color: clear;
+      width: 100%;
+      padding: 10px;
+    }
+
+    /* Add a card effect for articles */
+    .card {
+      background-color: #abcb89;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    /* Add a card effect for articles */
+    .contact {
+      background-color: #abcb89;
+      padding: 10px;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    /* Footer styling */
+    .col-md-12 {
+      color: #abcb89;
+      margin: 0;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .footer-link {
+      text-align: center;
+      margin: 1em;
+    }
+
+    .footer-link:hover {
+      color: #abcb89;
+    }
+
+    .col-md-12 {
+      color: #6AA16A;
+    }
+
+    /* Responsive layout - when the screen is less than 900px wide, make the two columns stack on top of each other instead of next to each other*/
+    @media screen and (max-width: 900px) {
+      h1,
+      .jumbotron img,
+      .leftcolumn,
+      .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="jumbotron">
+    <h1>Artichoke<br />and<br />Chicken</h1>
+    <img src="images/artichokechicken.png" alt="icon-img" />
+  </div>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Coding Sites<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Udemy</a></li>
+              <li><a href="#">Sololearn</a></li>
+              <li><a href="#">Codecademy</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Art Sites<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Deviant Art</a></li>
+              <li><a href="#">Matte Painting</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Writing Sites<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Some site</a></li>
+              <li><a href="#">Another Site</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Archive<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">March 2019</a></li>
+              <li><a href="#">April 2019</a></li>
+              <li><a href="#">May 2019</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>Adaptations</h2>
+        <h5>God in the Bowl</h5>
+        <h5>March 1st 2019</h5>
+        <textarea>
+        </textarea>
+      </div>
+      <div class="card">
+        <h2>Screenplay - the GODS</h2>
+        <h5>Title description</h5>
+        <h5>Sep 2, 2017</h5>
+        <textarea>
+        </textarea>
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>What about it?</h2>
+        <div class="fakeimg" style="height:100px;">alt-img</div>
+        <p>A blog for updates about my writing, art, and coding endeavors.</p>
+      </div>
+      <div class="card">
+        <h3>Current Interests</h3>
+        <div class="fakeimg">Art</div><br>
+        <div class="fakeimg">Writing</div><br>
+        <div class="fakeimg">Coding</div>
+      </div>
+
+      <div class="card">
+        <h3>Check Me Out</h3>
+        <a class="footer-link" href="https://www.linkedin.com/in/james-raymond-0756963/">
+          <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png" style="width: 60px; height: 60px;" /></a>
+        <a class="footer-link" href="https://github.com/jhraymond">
+          <img src="https://image.flaticon.com/icons/png/512/25/25231.png" style="width: 55px; height: 55px;" /></a>
+        <a class="footer-link" href="http://jhraymond.github.io/CV/Portfolio.html">
+          <img src="https://cdn1.iconfinder.com/data/icons/black-round-web-icons/100/round-web-icons-black-46-512.png" style="width: 70px; height: 70px;" /></a>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="col-md-12">
+    <div class="copyright">
+      <p>© 2020 The Artichoke and Chicken</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
